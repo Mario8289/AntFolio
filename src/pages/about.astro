@@ -1,0 +1,28 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="About" description="About the author." currentPage="about">
+  <div class="prose dark:prose-invert max-w-none">
+    <h1 class="text-3xl font-mono mb-6 uppercase tracking-tight">About Me</h1>
+    <p class="text-lg opacity-80 mb-6">
+      I'm a software engineer and designer obsessed with minimalist, high-performance web experiences. 
+      My goal is to strike the perfect balance between technical precision and human-centric design.
+    </p>
+    <h2 class="text-xl font-mono font-bold text-accent mb-4">Tech Specs</h2>
+    <ul class="grid grid-cols-2 gap-4 list-none p-0 font-mono text-sm">
+      <li class="flex items-center space-x-2">
+        <span class="text-accent">01.</span> <span>TypeScript</span>
+      </li>
+      <li class="flex items-center space-x-2">
+        <span class="text-accent">02.</span> <span>React / Astro</span>
+      </li>
+      <li class="flex items-center space-x-2">
+        <span class="text-accent">03.</span> <span>Tailwind CSS</span>
+      </li>
+      <li class="flex items-center space-x-2">
+        <span class="text-accent">04.</span> <span>Framer Motion</span>
+      </li>
+    </ul>
+  </div>
+</Layout>

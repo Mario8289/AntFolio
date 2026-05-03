@@ -1,0 +1,18 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import PostCard from '../../components/PostCard.astro';
+import { getCollection } from 'astro:content';
+
+const posts = await getCollection('blog');
+const sortedPosts = posts.sort((a, b) => new Date(b.data.date).getTime() - new Date(a.data.date).getTime());
+---
+
+<Layout title="Posts" description="Archive of all blog posts." currentPage="posts">
+  <h1 class="text-3xl font-mono mb-2 uppercase tracking-tight">Post Archive</h1>
+  <p class="opacity-60 mb-12">All the articles I've posted.</p>
+  <ul class="p-0">
+    {sortedPosts.map((post) => (
+      <PostCard post={post} />
+    ))}
+  </ul>
+</Layout>

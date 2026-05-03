@@ -1,0 +1,36 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Tips & Tricks" description="Bite-sized technical insights." currentPage="tips">
+  <div class="space-y-8">
+    <div>
+      <h1 class="text-3xl font-mono mb-2 uppercase tracking-tight">Tips & Tricks</h1>
+      <p class="opacity-60 mb-12">Bite-sized architectural insights for modern web development.</p>
+    </div>
+
+    <div class="grid grid-cols-1 gap-6">
+      <div class="card group">
+        <div class="flex justify-between items-start mb-2">
+          <span class="text-[10px] font-mono text-accent uppercase tracking-widest">Performance</span>
+          <time class="text-[10px] font-mono opacity-40">Entry #42</time>
+        </div>
+        <h3 class="text-lg font-mono font-bold group-hover:text-accent transition-colors mb-2">The "Lazy-First" Philosophy</h3>
+        <p class="text-sm opacity-70">If you aren't using `Intl.RelativeTimeFormat` for your timestamps, you're missing out on native internationalization. Stop shipping polyfills you don't need.</p>
+      </div>
+      
+      <div class="card group opacity-50">
+        <div class="flex justify-between items-start mb-2">
+          <span class="text-[10px] font-mono text-accent uppercase tracking-widest">DX</span>
+          <time class="text-[10px] font-mono opacity-40">Entry #41</time>
+        </div>
+        <h3 class="text-lg font-mono font-bold mb-2">Architecting via Zod</h3>
+        <p class="text-sm">Validate your environment variables at the entry point of your app. Your future self will thank you when the CI/CD pipeline fails with a clear error instead of a cryptic `undefined` runtime bug.</p>
+      </div>
+    </div>
+
+    <div class="text-center py-12">
+      <p class="font-mono text-xs opacity-40 italic">-- End of stream. More nodes pending. --</p>
+    </div>
+  </div>
+</Layout>

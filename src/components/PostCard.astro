@@ -1,0 +1,39 @@
+---
+import { motion } from "motion/react";
+
+interface Props {
+  post: {
+    id: string;
+    data: {
+      title: string;
+      date: string;
+      description: string;
+      tags: string[];
+    };
+  };
+}
+
+const { post } = Astro.props;
+const { title, date, description, tags } = post.data;
+const href = `/posts/${post.id}`;
+---
+
+<li class="my-6 list-none">
+  <a 
+    href={href}
+    class="text-left group w-full block"
+  >
+    <div class="flex items-center space-x-2 mb-1">
+      <time class="text-sm font-mono opacity-60">{date}</time>
+      <span class="text-xs font-mono px-2 py-0.5 border border-gray-300 dark:border-gray-700 group-hover:border-accent transition-colors">
+        {tags[0]}
+      </span>
+    </div>
+    <h3 class="text-xl font-mono font-bold group-hover:text-accent group-hover:underline underline-offset-4 decoration-accent transition-all">
+      {title}
+    </h3>
+    <p class="mt-2 text-sm opacity-80 line-clamp-2">
+      {description}
+    </p>
+  </a>
+</li>

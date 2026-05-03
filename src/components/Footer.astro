@@ -1,0 +1,30 @@
+---
+import { Github, Twitter, Linkedin, Mail, Rss } from "lucide-react";
+
+const currentYear = new Date().getFullYear();
+
+const socialLinks = [
+  { icon: Github, href: "#", name: "Github" },
+  { icon: Twitter, href: "#", name: "Twitter" },
+  { icon: Linkedin, href: "#", name: "LinkedIn" },
+  { icon: Mail, href: "#", name: "Email" },
+  { icon: Rss, href: "#", name: "RSS" },
+];
+---
+
+<footer class="mt-auto py-8 px-4 sm:px-8 max-w-4xl mx-auto w-full border-t border-dashed border-gray-300 dark:border-gray-700">
+  <div class="flex flex-col sm:flex-row justify-between items-center space-y-4 sm:space-y-0 text-sm font-mono opacity-60">
+    <p>Copyright © {currentYear} | All rights reserved.</p>
+    <div class="flex items-center space-x-4">
+      {socialLinks.map((link) => (
+        <a
+          href={link.href}
+          class="hover:text-accent transition-colors"
+          aria-label={link.name}
+        >
+          <link.icon size={18} />
+        </a>
+      ))}
+    </div>
+  </div>
+</footer>

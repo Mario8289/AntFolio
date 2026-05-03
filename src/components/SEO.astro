@@ -1,0 +1,38 @@
+---
+interface Props {
+  title?: string;
+  description?: string;
+}
+
+const { title, description } = Astro.props;
+
+const baseTitle = "AstroPaper";
+const defaultDesc = "A minimalist, technical blog theme inspired by Astro Paper.";
+
+const fullTitle = title ? `${title} | ${baseTitle}` : baseTitle;
+const fullDesc = description || defaultDesc;
+---
+
+<!-- Global Metadata -->
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+<meta name="generator" content={Astro.generator} />
+
+<!-- Primary Meta Tags -->
+<title>{fullTitle}</title>
+<meta name="title" content={fullTitle} />
+<meta name="description" content={fullDesc} />
+<meta name="theme-color" content="#9F7AEA" />
+
+<!-- Open Graph / Facebook -->
+<meta property="og:type" content="website" />
+<meta property="og:url" content={Astro.url} />
+<meta property="og:title" content={fullTitle} />
+<meta property="og:description" content={fullDesc} />
+
+<!-- Twitter -->
+<meta property="twitter:card" content="summary_large_image" />
+<meta property="twitter:url" content={Astro.url} />
+<meta property="twitter:title" content={fullTitle} />
+<meta property="twitter:description" content={fullDesc} />
