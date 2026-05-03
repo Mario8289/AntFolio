@@ -2,27 +2,112 @@
 import Layout from '../layouts/Layout.astro';
 ---
 
-<Layout title="About" description="About the author." currentPage="about">
-  <div class="prose dark:prose-invert max-w-none">
-    <h1 class="text-3xl font-mono mb-6 uppercase tracking-tight">About Me</h1>
-    <p class="text-lg opacity-80 mb-6">
-      I'm a software engineer and designer obsessed with minimalist, high-performance web experiences. 
-      My goal is to strike the perfect balance between technical precision and human-centric design.
-    </p>
-    <h2 class="text-xl font-mono font-bold text-accent mb-4">Tech Specs</h2>
-    <ul class="grid grid-cols-2 gap-4 list-none p-0 font-mono text-sm">
-      <li class="flex items-center space-x-2">
-        <span class="text-accent">01.</span> <span>TypeScript</span>
+<Layout title="About" description="About Anthony Marriott." currentPage="about">
+  <div class="max-w-none font-sans">
+    <h1 class="text-3xl font-mono mb-10 uppercase tracking-tight">Anthony Marriott</h1>
+
+    <h2 class="text-2xl font-mono font-bold text-accent mb-4 border-b border-accent/20 pb-2">Core Competencies</h2>
+    <div class="flex flex-wrap justify-center items-center gap-x-6 gap-y-3 py-6 mb-10 text-center">
+      <span class="text-4xl font-bold text-accent hover:scale-105 transition-transform cursor-default">Python</span>
+      <span class="text-3xl font-semibold opacity-90 hover:text-accent transition-colors cursor-default">SQL</span>
+      <span class="text-2xl font-mono opacity-70 cursor-default">Airflow</span>
+      <span class="text-xl italic opacity-80 cursor-default">Power BI</span>
+      <span class="text-3xl font-bold opacity-85 hover:text-accent transition-colors cursor-default">dbt</span>
+      <span class="text-lg opacity-60 cursor-default">FastAPI</span>
+      <span class="text-2xl font-semibold text-accent/80 hover:scale-105 transition-transform cursor-default">Kafka</span>
+      <span class="text-sm font-mono opacity-50 cursor-default">Celery</span>
+      <span class="text-lg opacity-70 cursor-default">PostgreSQL</span>
+      <span class="text-xl font-medium opacity-80 cursor-default">Docker</span>
+      <span class="text-base italic opacity-60 cursor-default">Polars</span>
+      <span class="text-2xl font-bold opacity-90 cursor-default">Market Data</span>
+      <span class="text-sm opacity-50 cursor-default">Pytest</span>
+      <span class="text-lg font-mono opacity-60 cursor-default">GitLab CI/CD</span>
+      <span class="text-xl font-semibold text-accent/70 cursor-default">Backtesting</span>
+      <span class="text-base opacity-70 cursor-default">Metabase</span>
+      <span class="text-sm font-mono opacity-40 cursor-default">Luigi</span>
+      <span class="text-lg opacity-80 cursor-default">Parquet</span>
+      <span class="text-2xl font-bold opacity-85 hover:text-accent transition-colors cursor-default">Distributed Systems</span>
+      <span class="text-sm opacity-50 cursor-default">SQLAlchemy</span>
+      <span class="text-base font-mono opacity-60 cursor-default">OneTick</span>
+      <span class="text-lg italic opacity-70 cursor-default">Jupyter</span>
+      <span class="text-sm opacity-40 cursor-default">Seaborn</span>
+      <span class="text-xl font-medium opacity-80 cursor-default">Pricing Engines</span>
+      <span class="text-base opacity-60 cursor-default">Bokeh</span>
+      <span class="text-sm font-mono opacity-50 cursor-default">MySQL</span>
+      <span class="text-lg font-semibold text-accent/60 cursor-default">Audit Systems</span>
+    </div>
+
+    <h2 class="text-2xl font-mono font-bold text-accent mb-6 border-b border-accent/20 pb-2">Professional Experience</h2>
+    
+    <div class="mb-8">
+      <div class="flex flex-col sm:flex-row justify-between sm:items-baseline mb-1">
+        <h3 class="font-bold text-xl m-0">Senior Python / BI Engineer</h3>
+        <span class="font-mono text-sm opacity-70">May 2018 - Present</span>
+      </div>
+      <div class="text-accent text-sm font-mono mb-3">LMAX Exchange, London</div>
+      <ul class="text-sm opacity-80 pl-5 space-y-2">
+        <li>Deploying time-series database OneTick for research and redistribution of market data.</li>
+        <li>Designed and built a pricing engine managing tariffs for £2.5M+/month in client revenues.</li>
+        <li>Architected a domain-specific audit tracking system, strengthening revenue protection and compliance.</li>
+        <li>Developed a strategy backtesting tool supporting internalisation growth to £2B+ in daily trade volume.</li>
+        <li>Lead deployment and management of Airflow for orchestration of data and reporting workflows.</li>
+      </ul>
+    </div>
+
+    <div class="mb-8">
+      <div class="flex flex-col sm:flex-row justify-between sm:items-baseline mb-1">
+        <h3 class="font-bold text-xl m-0">Technical Support Officer</h3>
+        <span class="font-mono text-sm opacity-70">Apr 2017 - Mar 2018</span>
+      </div>
+      <div class="text-accent text-sm font-mono mb-3">GE Smallworld, Cambridge</div>
+      <ul class="text-sm opacity-80 pl-5 space-y-2">
+        <li>Supported Vodafone’s 5G rollout & Power BI dashboard delivery.</li>
+      </ul>
+    </div>
+
+    <div class="mb-8">
+      <div class="flex flex-col sm:flex-row justify-between sm:items-baseline mb-1">
+        <h3 class="font-bold text-xl m-0">GIS Consultant</h3>
+        <span class="font-mono text-sm opacity-70">Jan 2015 - Apr 2017</span>
+      </div>
+      <div class="text-accent text-sm font-mono mb-3">Helyx Secure Systems, Cheltenham</div>
+      <ul class="text-sm opacity-80 pl-5 space-y-2">
+        <li>Presented at DSTL on sentiment analysis applications for military intelligence.</li>
+        <li>Delivered critical geospatial analysis and modeling (viewshed, MCA) to support MI5 and Special Forces operations.</li>
+        <li>Directed GIS software training for the Royal School of Military Survey and Royal Engineers.</li>
+      </ul>
+    </div>
+
+    <div class="mb-10">
+      <div class="flex flex-col sm:flex-row justify-between sm:items-baseline mb-1">
+        <h3 class="font-bold text-xl m-0">Senior Data Analyst & Team Lead</h3>
+        <span class="font-mono text-sm opacity-70">July 2005 - Jan 2015</span>
+      </div>
+      <div class="text-accent text-sm font-mono mb-3">HM Forces (Royal Engineers)</div>
+      <ul class="text-sm opacity-80 pl-5 space-y-2">
+        <li>Led a data analytics team on operations and at the National Centre for Geospatial Intelligence (NCGI).</li>
+        <li>Acquired expertise in OPIR systems for missile tracking and advanced light detection.</li>
+        <li>Developed machine learning systems to detect and monitor poppy harvests in Afghanistan.</li>
+      </ul>
+    </div>
+
+    <h2 class="text-2xl font-mono font-bold text-accent mb-6 border-b border-accent/20 pb-2">Education & Awards</h2>
+    <ul class="text-sm opacity-80 pl-0 list-none space-y-4">
+      <li class="border-l-2 border-accent/30 pl-4">
+        <strong class="text-base">Master Degree - Geographical Information Systems and Science</strong><br/>
+        <span class="font-mono text-xs opacity-70 block mt-1">Kingston University | Sept 2015 - Jan 2017</span>
       </li>
-      <li class="flex items-center space-x-2">
-        <span class="text-accent">02.</span> <span>React / Astro</span>
+      <li class="border-l-2 border-accent/30 pl-4">
+        <strong class="text-base">Bachelor Degree - Applied Computing (GIS)</strong><br/>
+        <span class="font-mono text-xs opacity-70 block mt-1">Sheffield Hallam University | Jan 2010 - Jan 2015</span>
       </li>
-      <li class="flex items-center space-x-2">
-        <span class="text-accent">03.</span> <span>Tailwind CSS</span>
+      <li class="border-l-2 border-accent/30 pl-4">
+        <strong class="text-base">APM Associate Project Management (IPMA Level D)</strong>
       </li>
-      <li class="flex items-center space-x-2">
-        <span class="text-accent">04.</span> <span>Framer Motion</span>
+      <li class="border-l-2 border-accent/30 pl-4">
+        <strong class="text-base">Task Force Helmand Commendation, Op Herrick (AFG)</strong>
       </li>
     </ul>
+
   </div>
 </Layout>
